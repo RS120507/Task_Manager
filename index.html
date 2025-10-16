@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Task Manager</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Advanced Task Manager</h1>
+      <button id="toggleMode">🌙 Dark Mode</button>
+    </header>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter a task">
+      <select id="categorySelect">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+      </select>
+      <select id="prioritySelect">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="date" id="dueDate">
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search tasks...">
+      <select id="filterCategory">
+        <option value="All">All Categories</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+      </select>
+      <select id="filterPriority">
+        <option value="All">All Priorities</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="dashboard">
+      <h3>Dashboard</h3>
+      <p>Total: <span id="totalTasks">0</span></p>
+      <p>Completed: <span id="completedTasks">0</span></p>
+      <p>Pending: <span id="pendingTasks">0</span></p>
+      <p>Overdue: <span id="overdueTasks">0</span></p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

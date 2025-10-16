@@ -1,0 +1,123 @@
+:root {
+  --bg-color: #f0f2f5;
+  --text-color: #333;
+  --primary-color: #2575fc;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+  --primary-color: #6a11cb;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+body.dark .container {
+  background: #2c2c2c;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#toggleMode {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-input, .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.task-input input, .task-input select, .filters input, .filters select {
+  padding: 8px;
+  flex: 1;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#addTaskBtn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-item .priority-High { border-left: 5px solid #ff4d4d; }
+.task-item .priority-Medium { border-left: 5px solid #ffa500; }
+.task-item .priority-Low { border-left: 5px solid #4caf50; }
+
+.delete-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard {
+  margin-top: 20px;
+  background: #e0e0e0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+body.dark .dashboard {
+  background: #3a3a3a;
+}
